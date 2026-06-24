@@ -5,26 +5,131 @@
 }
 
 body{
-    font-family:Tahoma;
+    font-family:Tahoma, Arial, sans-serif;
     background:#f4f6f9;
+    direction:rtl;
 }
 
+/* الهيدر */
 header{
-    background:#1f2937;
-    color:white;
+    background:linear-gradient(135deg,#0f172a,#1e3a5f);
     text-align:center;
-    padding:40px;
+    padding: 20px;
 }
 
+/* الشعار */
+.logo{
+    width:480px;
+    max-width:90%;
+    height:auto;
+    display:block;
+    margin:auto;
+}
+
+/* الحاوية */
 .programs{
     width:90%;
-    margin:30px auto;
+    max-width:1200px;
+    margin:40px auto;
 }
 
+/* الروابط */
+.card-link{
+    text-decoration:none;
+    color:inherit;
+    display:block;
+    margin-bottom:25px;
+}
+
+/* البطاقات */
 .card{
+    background:#fff;
+    border-radius:25px;
+    padding:30px;
+    box-shadow:0 10px 25px rgba(0,0,0,0.08);
+
+    text-align:right;
+
+    transition:all .3s ease;
+}
+
+/* تأثير المرور */
+.card:hover{
+    transform:translateY(-8px);
+    box-shadow:0 15px 35px rgba(30,58,95,0.15);
+}
+
+/* العناوين */
+.card h2{
+    color:#0f172a;
+    font-size:34px;
+    margin-bottom:8px;
+}
+
+/* الوصف */
+.card p{
+    color:#6b7280;
+    font-size:18px;
+}
+
+/* للموبايل */
+@media(max-width:768px){
+
+    header{
+        padding:40px 15px;
+    }
+
+    .logo{
+        width:220px;
+    }
+
+    .card{
+        padding:20px;
+    }
+
+    .card h2{
+        font-size:26px;
+    }
+
+    .card p{
+        font-size:16px;
+    }
+}
+.file-link{
+    display:block;
     background:white;
     padding:20px;
-    margin:15px;
+    margin:15px auto;
+    width:80%;
     border-radius:15px;
-    box-shadow:0 0 10px rgba(0,0,0,.1);
+    text-decoration:none;
+    color:#1e3a5f;
+    font-size:20px;
+    font-weight:bold;
+    box-shadow:0 5px 15px rgba(0,0,0,0.1);
+}
+
+.file-link:hover{
+    transform:translateY(-3px);
+    box-shadow:0 10px 20px rgba(0,0,0,0.15);
+}
+
+h1{
+    text-align:center;
+    margin:30px;
+    color:#1e3a5f;
+}
+.back-btn{
+    display:inline-block;
+    padding:12px 20px;
+    background:#1e3a5f;
+    color:white;
+    text-decoration:none;
+    border-radius:10px;
+    margin:20px;
+    font-size:18px;
+}
+
+.back-btn:hover{
+    background:#0f172a;
 }
