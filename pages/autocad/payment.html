@@ -1,53 +1,189 @@
 <!DOCTYPE html>
-<html lang="ar" dir="rtl">
-
+<html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>مكتبة AutoCAD</title>
+<title>Payment Methods</title>
 
 <link rel="stylesheet" href="../../style.css">
+
+<style>
+
+body{
+    margin:0;
+    background:#f4f6f9;
+    font-family:Arial,Helvetica,sans-serif;
+}
+
+header{
+    background:linear-gradient(135deg,#0f172a,#1e3a5f);
+    color:white;
+    text-align:center;
+    padding:50px 20px;
+}
+
+header h1{
+    font-size:42px;
+    margin:0;
+}
+
+header p{
+    font-size:18px;
+    opacity:.9;
+}
+
+.payment-container{
+    max-width:850px;
+    margin:50px auto;
+    padding:20px;
+}
+
+.payment-card{
+    background:white;
+    border-radius:18px;
+    padding:30px;
+    margin-bottom:25px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    box-shadow:0 10px 25px rgba(0,0,0,.12);
+    transition:.3s;
+}
+
+.payment-card:hover{
+    transform:translateY(-5px);
+}
+
+.payment-info h2{
+    margin:0;
+    font-size:28px;
+}
+
+.payment-info p{
+    font-size:26px;
+    font-weight:bold;
+    margin-top:12px;
+}
+
+button{
+    border:none;
+    background:#0f766e;
+    color:white;
+    padding:14px 28px;
+    border-radius:10px;
+    cursor:pointer;
+    font-size:17px;
+}
+
+button:hover{
+    background:#115e59;
+}
+
+.zain{
+    border-left:8px solid #00B140;
+}
+
+.orange{
+    border-left:8px solid #ff7900;
+}
+
+.cliq{
+    border-left:8px solid #0078D4;
+}
+
+@media(max-width:700px){
+
+.payment-card{
+flex-direction:column;
+text-align:center;
+gap:20px;
+}
+
+}
+
+</style>
+
 </head>
 
 <body>
 
 <header>
-    <h1>📚 مكتبة AutoCAD</h1>
-    <p>ملفات وبلوكات وقوالب جاهزة</p>
+
+<h1>💳 Payment Methods</h1>
+
+<p>Select your preferred payment method</p>
+
 </header>
 
-<div class="programs">
+<div class="payment-container">
 
-    <div class="card">
-        <h2>بلوكات الأبواب والنوافذ</h2>
-        <p>ملفات DWG جاهزة للتحميل</p>
-    </div>
+<div class="payment-card zain">
 
-    <div class="card">
-        <h2>بلوكات الأثاث</h2>
-        <p>غرف نوم ومجالس ومطابخ</p>
-    </div>
+<div class="payment-info">
 
-    <div class="card">
-        <h2>مخططات سكنية</h2>
-        <p>فلل ومنازل جاهزة للتعديل</p>
-    </div>
+<h2>Zain Cash</h2>
 
-    <div class="card">
-        <h2>تفاصيل تنفيذية</h2>
-        <p>تفاصيل معمارية كاملة</p>
-    </div>
-
-    <div class="card">
-        <h2>قوالب طباعة</h2>
-        <p>A4 - A3 - A2 - A1</p>
-    </div>
+<p id="zain">0798856509</p>
 
 </div>
 
-<div style="text-align:center; margin:30px;">
-    <a href="autocad.html">⬅ العودة إلى AutoCAD</a>
+<button onclick="copy('zain')">
+
+📋 Copy Number
+
+</button>
+
 </div>
+
+<div class="payment-card orange">
+
+<div class="payment-info">
+
+<h2>Orange Money</h2>
+
+<p id="orange">0798856509</p>
+
+</div>
+
+<button onclick="copy('orange')">
+
+📋 Copy Number
+
+</button>
+
+</div>
+
+<div class="payment-card cliq">
+
+<div class="payment-info">
+
+<h2>CliQ</h2>
+
+<p id="cliq">0778441261</p>
+
+</div>
+
+<button onclick="copy('cliq')">
+
+📋 Copy Number
+
+</button>
+
+</div>
+
+</div>
+
+<script>
+
+function copy(id){
+
+navigator.clipboard.writeText(document.getElementById(id).innerText);
+
+alert("Number copied successfully!");
+
+}
+
+</script>
 
 </body>
 
